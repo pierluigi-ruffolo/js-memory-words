@@ -45,14 +45,11 @@ const output = document.querySelector(".output");
 const containerBtnSecondary = document.querySelector(
   ".container-btn-secondary"
 );
+const btnDanger = document.querySelector(".btn-danger");
 /* variabili globali */
 let arryNumRandom = [];
 /*  click sul bottone genera parole */
 btnInputSuccess.addEventListener("click", () => {
-  output.innerHTML = "";
-  containerWord.innerHTML = "";
-  containerBtnSecondary.classList.add("d-none");
-  btnInputCheked.disabled = false;
   btnInputSuccess.classList.add("d-none");
   componeCinqueParole();
   mostrainputTime();
@@ -78,9 +75,17 @@ btnInputCheked.addEventListener("click", () => {
   } else {
     output.innerHTML = `hai indovinato ${contatore} parole  (${arrOutput})`;
   }
-  btnInputSuccess.classList.remove("d-none");
+  btnDanger.classList.remove("d-none");
 });
-
+/* al click sul bottone rigioca */
+btnDanger.addEventListener("click", () => {
+  output.innerHTML = "";
+  containerWord.innerHTML = "";
+  containerBtnSecondary.classList.add("d-none");
+  btnInputCheked.disabled = false;
+  componeCinqueParole();
+  mostrainputTime();
+});
 /* funzione che prende i valori inseriti dall'utente e li confronta con quelli precedenti */
 function calcolorisultato(InputControll) {
   const arrwordUtente = [];
