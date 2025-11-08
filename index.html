@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link href="./css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="wrap vh-100">
+      <!-- title -->
+      <header><h1 class="text-center p-3">Ricorda le Parole...</h1></header>
+      <!-- fine title -->
+      <div class="container">
+        <!-- header main -->
+        <div class="row">
+          <div class="col-12">
+            <div class="d-flex justify-content-between">
+              <h3 class="text-danger-emphasis">
+                Visualizzerai le parole solo per 20 secondi...
+                <i class="bi bi-arrow-right-circle ms-3"></i>
+              </h3>
+              <button class="btn btn-success">Genera Parole</button>
+            </div>
+            <!-- fine header main -->
+            <!-- output -->
+            <div>
+              <div
+                class="d-flex justify-content-between mt-5 text-white fs-4 container-words"
+              >
+                <!-- <p>sadsa</p>
+                <p>asad</p>
+                <p>sadasd</p>
+                <p>sadsad</p>
+                <p>sadda</p> -->
+              </div>
+              <div class="output mt-4 text-center text-black fs-2">
+                <h2></h2>
+              </div>
+              <div
+                class="container-btn-secondary d-flex justify-content-center mt-5 d-none"
+              >
+                <button class="btn btn-secondary btn-lg btn-verifica">
+                  Verifica
+                </button>
+              </div>
+            </div>
+            <!--fine output -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./javascript/jscript.js"></script>
+  </body>
+</html>

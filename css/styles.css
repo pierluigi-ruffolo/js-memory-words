@@ -1,0 +1,13 @@
+.wrap {
+  background-image: url("../img/fc094731-b64c-4b55-ad24-eec1f730f164.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.btn-verifica {
+  width: 30%;
+}
+
+.form-control {
+  width: 15%;
+}
