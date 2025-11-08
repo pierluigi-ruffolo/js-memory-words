@@ -82,7 +82,7 @@ btnInputCheked.addEventListener("click", () => {
 /* al click sul bottone rigioca */
 btnDanger.addEventListener("click", () => {
   contatoreTimer = 30;
-  timer.innerHTML = contatoreTimer;
+  timer.innerHTML = `Rimangono ${contatoreTimer} secondi...`;
   output.innerHTML = "";
   containerWord.innerHTML = "";
   containerBtnSecondary.classList.add("d-none");
