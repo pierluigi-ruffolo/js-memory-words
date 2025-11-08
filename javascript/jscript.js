@@ -110,12 +110,12 @@ function mostrainputTime() {
       clearInterval(timerInterval);
       containerWord.innerHTML = "";
       containerWord.innerHTML = `<input type="text" class="form-control bg-transparent" id="text1">
-    <input <input type="text" class="form-control bg-transparent" id="text2">
-     <input <input type="text" class="form-control bg-transparent" id="text3">
-      <input <input type="text" class="form-control bg-transparent" id="text4">
-       <input <input type="text" class="form-control bg-transparent" id="text5">`;
+    <input type="text" class="form-control bg-transparent" id="text2">
+     <input type="text" class="form-control bg-transparent" id="text3">
+     <input type="text" class="form-control bg-transparent" id="text4">
+      <input type="text" class="form-control bg-transparent" id="text5">`;
       containerBtnSecondary.classList.remove("d-none");
-      timer.innerHTML = "Tempo scaduto";
+      timer.innerHTML = "Tempo scaduto Ora tocca a te ricordare!!";
     }
   }, 1000);
 }
