@@ -46,8 +46,10 @@ const containerBtnSecondary = document.querySelector(
   ".container-btn-secondary"
 );
 const btnDanger = document.querySelector(".btn-danger");
+const timer = document.querySelector(".timer");
 /* variabili globali */
 let arryNumRandom = [];
+let contatoreTimer = 30;
 /*  click sul bottone genera parole */
 btnInputSuccess.addEventListener("click", () => {
   btnInputSuccess.classList.add("d-none");
@@ -79,10 +81,13 @@ btnInputCheked.addEventListener("click", () => {
 });
 /* al click sul bottone rigioca */
 btnDanger.addEventListener("click", () => {
+  contatoreTimer = 30;
+  timer.innerHTML = contatoreTimer;
   output.innerHTML = "";
   containerWord.innerHTML = "";
   containerBtnSecondary.classList.add("d-none");
   btnInputCheked.disabled = false;
+  btnDanger.classList.add("d-none");
   componeCinqueParole();
   mostrainputTime();
 });
@@ -95,17 +100,22 @@ function calcolorisultato(InputControll) {
   }
   return arrwordUtente;
 }
-
+let timerInterval = "";
 /* funzione che dopo 20 secondi nasconde parole generate e mostra input con bottone verifica */
 function mostrainputTime() {
-  setTimeout(() => {
-    containerWord.innerHTML = "";
-    containerWord.innerHTML = `<input type="text" class="form-control bg-transparent" id="text1">
+  timerInterval = setInterval(() => {
+    contatoreTimer--;
+    timer.innerHTML = contatoreTimer;
+    if (contatoreTimer === 0) {
+      clearInterval(timerInterval);
+      containerWord.innerHTML = "";
+      containerWord.innerHTML = `<input type="text" class="form-control bg-transparent" id="text1">
     <input <input type="text" class="form-control bg-transparent" id="text2">
      <input <input type="text" class="form-control bg-transparent" id="text3">
       <input <input type="text" class="form-control bg-transparent" id="text4">
        <input <input type="text" class="form-control bg-transparent" id="text5">`;
-    containerBtnSecondary.classList.remove("d-none");
+      containerBtnSecondary.classList.remove("d-none");
+    }
   }, 1000);
 }
 
