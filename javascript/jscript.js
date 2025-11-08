@@ -105,7 +105,7 @@ let timerInterval = "";
 function mostrainputTime() {
   timerInterval = setInterval(() => {
     contatoreTimer--;
-    timer.innerHTML = contatoreTimer;
+    timer.innerHTML = `Rimangono ${contatoreTimer} secondi...`;
     if (contatoreTimer === 0) {
       clearInterval(timerInterval);
       containerWord.innerHTML = "";
