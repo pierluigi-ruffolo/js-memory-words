@@ -115,6 +115,7 @@ function mostrainputTime() {
       <input <input type="text" class="form-control bg-transparent" id="text4">
        <input <input type="text" class="form-control bg-transparent" id="text5">`;
       containerBtnSecondary.classList.remove("d-none");
+      timer.innerHTML = "Tempo scaduto";
     }
   }, 1000);
 }
